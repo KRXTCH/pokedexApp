@@ -16,51 +16,6 @@ html{
   background-color: #282c34;
 }
 
-.header{
-  width: 100%;
-  display: inline-flex;
-}
-
-.header-logo{
-  height: 5vh;
-  margin-right: 3rem;
-}
-
-.input{
-  width: 90%;
-  margin: auto;
-}
-
-.pokemon-card{
-  background-color: white;
-  margin: 1rem;
-  border-radius: 5px;
-  width: 205px;
-}
-
-.pokemon-name{
-  text-align: center;
-  margin: 0;
-  font-size: 25px;
-}
-
-.pokemon-id{
-  font-size: 0.75rem;
-  padding-left: 5px;
-}
-
-.card-footer{
-  text-align: center;
-  margin: auto;
-  display: block; 
-}
-
-.img{
-  text-align: center;
-  margin: auto;
-  display: flex;
-}
-
 .type {
   display: inline-block;
   padding: 4px 8px;
@@ -71,7 +26,6 @@ html{
   text-transform: uppercase;
   margin: 1rem 0.5rem;
 }
-
 
 .poison {
   background-color: rgb(163, 62, 161);
@@ -144,32 +98,3 @@ html{
   background-color: rgb(111, 53, 252);
 }
 
-.inline-flex{
-  display: inline-flex;
-}
-
-.language-selector{
-  margin: 15px;
-  position: absolute;
-  right: 0;
-}
-
-.pokemon-card-details{
-  width: 50%;
-  height: fit-content;
-  margin: auto; 
-  background-color: white;
-  border-radius: 5px;
-}
-
-.moves{
-  width: 80%;
-height: auto;
-margin: auto;
-padding: 5rem;
-text-align: center;
-}
-
-.zoom{
-  width: 10rem;
-}

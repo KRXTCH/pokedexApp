@@ -13,9 +13,22 @@ import {
   Outlet,
 } from 'react-router-dom'
 import Card from '@mui/material/Card'
-import TextField from '@mui/material/TextField'
 import Grid from '@mui/material/Grid'
 import Dialog from '@mui/material/Dialog'
+import {MenuItem} from '@mui/material'
+import {
+  StylizedHeader,
+  StylizedImage,
+  PokemonName,
+  PokemonId,
+  CardFooter,
+  PokemonImage,
+  ZoomedPokemonImage,
+  LanguageSelecor,
+  MovesList,
+  PokemonList,
+  CustomTextField
+} from 'stylesComponents'
 
 function App() {
   const [language, setLanguage] = React.useState('en')
@@ -38,28 +51,21 @@ function App() {
   )
 }
 
-function SearchBar({ name, setName }) {
-  function handleNameChange(e) {
-    setName(e.target.value)
-  }
 
+function Header({ language, setLanguage }) {
   return (
-    <TextField
-      style={{ backgroundColor: 'white' }}
-      fullWidth
-      placeholder="Enter a pokemon name"
-      value={name}
-      onChange={handleNameChange}
-    ></TextField>
+    <StylizedHeader>
+      <Link to="/">
+        <StylizedImage src={pokeLogo} alt="logo" />
+      </Link>
+      <SelectLanguage language={language} setLanguage={setLanguage}></SelectLanguage>
+    </StylizedHeader>
   )
 }
 
-function Header({ language, setLanguage }) {
+function SelectLanguage({language, setLanguage}) {
   let languages = Object.keys(pokeList[0]['names']).map((l) => {
-    if (l == language) {
-      return <option selected>{l}</option>
-    }
-    return <option>{l}</option>
+    return <MenuItem value={l}>{l}</MenuItem>
   })
 
   function ChangeLanguage(e) {
@@ -67,14 +73,14 @@ function Header({ language, setLanguage }) {
   }
 
   return (
-    <div className="header">
-      <Link to="/">
-        <img className="header-logo" src={pokeLogo} alt="logo" />
-      </Link>
-      <select className="language-selector" onChange={ChangeLanguage}>
+    
+      <LanguageSelecor
+        labelId="default-label"
+        value={language}
+        label="Language"
+        onChange={ChangeLanguage}>
         {languages}
-      </select>
-    </div>
+      </LanguageSelecor>
   )
 }
 
@@ -100,14 +106,29 @@ function AppBody({ language, name, setName }) {
   return (
     <div>
       <SearchBar name={name} setName={setName}></SearchBar>
-      <div className="pokemon-list" style={{ padding: '1rem' }}>
+      <PokemonList>
         <Grid container spacing={3}>
           {html}
         </Grid>
-
         <Outlet />
-      </div>
+      </PokemonList>
     </div>
+  )
+}
+
+
+function SearchBar({ name, setName }) {
+  function handleNameChange(e) {
+    setName(e.target.value)
+  }
+
+  return (
+    <CustomTextField
+      fullWidth
+      placeholder="Enter a pokemon name"
+      value={name}
+      onChange={handleNameChange}>
+      </CustomTextField>
   )
 }
 
@@ -118,12 +139,12 @@ function PokemonComponent({ id, img, name, typesList, language }) {
 
   return (
     <Card>
-      <span className="pokemon-id">No.{pad(id, 3)}</span>
-      <p className="pokemon-name">{name}</p>
+      <PokemonId>No.{pad(id, 3)}</PokemonId>
+      <PokemonName>{name}</PokemonName>
       <div className="img-container">
-        <img className="img" src={img} alt={img}></img>
+        <PokemonImage src={img} alt={img} />
       </div>
-      <div className="card-footer">{types}</div>
+      <CardFooter>{types}</CardFooter>
     </Card>
   )
 }
@@ -152,12 +173,12 @@ function Details({ language }) {
         <Dialog open={true} onClose={handleClose}>
           <Grid item>
             <Card>
-              <span className="pokemon-id">No.{pad(element['id'], 3)}</span>
-              <p className="pokemon-name">{element['names'][language]}</p>
+              <PokemonId>No.{pad(element['id'], 3)}</PokemonId>
+              <PokemonName>{element['names'][language]}</PokemonName>
               <div className="img-container">
-                <img className="img zoom" src={element['image']} alt={element['image']}></img>
+                <ZoomedPokemonImage src={element['image']} alt={element['image']} />
               </div>
-              <div className="card-footer">{types}</div>
+              <CardFooter>{types}</CardFooter>
               <PokeDetails
                 movesListe={element['moves']}
                 height={element['height']}
@@ -179,7 +200,8 @@ function PokeDetails({ movesListe, height, weight }) {
   })
 
   return (
-    <div className="moves">
+    <MovesList>
+      <h5>Moves : </h5>
       {moves}
       <div>
         <span>
@@ -191,7 +213,7 @@ function PokeDetails({ movesListe, height, weight }) {
           {weight}
         </span>
       </div>
-    </div>
+    </MovesList>
   )
 }
 
