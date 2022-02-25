@@ -28,6 +28,7 @@ html{
 
 .input{
   width: 90%;
+  margin: auto;
 }
 
 .pokemon-card{
@@ -35,11 +36,6 @@ html{
   margin: 1rem;
   border-radius: 5px;
   width: 205px;
-}
-
-.pokemon-list{
-  display: inline-flex;
-  flex-wrap: wrap;
 }
 
 .pokemon-name{
@@ -152,12 +148,28 @@ html{
   display: inline-flex;
 }
 
-.search{
-  height: fit-content;
-  width: 50%;
-  margin: auto;
+.language-selector{
+  margin: 15px;
+  position: absolute;
+  right: 0;
 }
 
-.language-selector{
-  margin: auto 0;
+.pokemon-card-details{
+  width: 50%;
+  height: fit-content;
+  margin: auto; 
+  background-color: white;
+  border-radius: 5px;
+}
+
+.moves{
+  width: 80%;
+height: auto;
+margin: auto;
+padding: 5rem;
+text-align: center;
+}
+
+.zoom{
+  width: 10rem;
 }

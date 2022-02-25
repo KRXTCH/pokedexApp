@@ -1,0 +1,155 @@
+{
+  "normal": {
+    "ja": "ノーマル",
+    "ko": "노말",
+    "fr": "Normal",
+    "de": "Normal",
+    "es": "Normal",
+    "it": "Normale",
+    "en": "Normal"
+  },
+  "fighting": {
+    "ja": "かくとう",
+    "ko": "격투",
+    "fr": "Combat",
+    "de": "Kampf",
+    "es": "Lucha",
+    "it": "Lotta",
+    "en": "Fighting"
+  },
+  "flying": {
+    "ja": "ひこう",
+    "ko": "비행",
+    "fr": "Vol",
+    "de": "Flug",
+    "es": "Volador",
+    "it": "Volante",
+    "en": "Flying"
+  },
+  "poison": {
+    "ja": "どく",
+    "ko": "독",
+    "fr": "Poison",
+    "de": "Gift",
+    "es": "Veneno",
+    "it": "Veleno",
+    "en": "Poison"
+  },
+  "ground": {
+    "ja": "じめん",
+    "ko": "땅",
+    "fr": "Sol",
+    "de": "Boden",
+    "es": "Tierra",
+    "it": "Terra",
+    "en": "Ground"
+  },
+  "rock": {
+    "ja": "いわ",
+    "ko": "바위",
+    "fr": "Roche",
+    "de": "Gestein",
+    "es": "Roca",
+    "it": "Roccia",
+    "en": "Rock"
+  },
+  "bug": {
+    "ja": "むし",
+    "ko": "벌레",
+    "fr": "Insecte",
+    "de": "Käfer",
+    "es": "Bicho",
+    "it": "Coleottero",
+    "en": "Bug"
+  },
+  "ghost": {
+    "ja": "ゴースト",
+    "ko": "고스트",
+    "fr": "Spectre",
+    "de": "Geist",
+    "es": "Fantasma",
+    "it": "Spettro",
+    "en": "Ghost"
+  },
+  "steel": {
+    "ja": "はがね",
+    "ko": "강철",
+    "fr": "Acier",
+    "de": "Stahl",
+    "es": "Acero",
+    "it": "Acciaio",
+    "en": "Steel"
+  },
+  "fire": {
+    "ja": "ほのお",
+    "ko": "불꽃",
+    "fr": "Feu",
+    "de": "Feuer",
+    "es": "Fuego",
+    "it": "Fuoco",
+    "en": "Fire"
+  },
+  "water": {
+    "ja": "みず",
+    "ko": "물",
+    "fr": "Eau",
+    "de": "Wasser",
+    "es": "Agua",
+    "it": "Acqua",
+    "en": "Water"
+  },
+  "grass": {
+    "ja": "くさ",
+    "ko": "풀",
+    "fr": "Plante",
+    "de": "Pflanze",
+    "es": "Planta",
+    "it": "Erba",
+    "en": "Grass"
+  },
+  "electric": {
+    "ja": "でんき",
+    "ko": "전기",
+    "fr": "Électrik",
+    "de": "Elektro",
+    "es": "Eléctrico",
+    "it": "Elettro",
+    "en": "Electric"
+  },
+  "psychic": {
+    "ja": "エスパー",
+    "ko": "에스퍼",
+    "fr": "Psy",
+    "de": "Psycho",
+    "es": "Psíquico",
+    "it": "Psico",
+    "en": "Psychic"
+  },
+  "ice": {
+    "ja": "こおり",
+    "ko": "얼음",
+    "fr": "Glace",
+    "de": "Eis",
+    "es": "Hielo",
+    "it": "Ghiaccio",
+    "en": "Ice"
+  },
+  "dragon": {
+    "ja": "ドラゴン",
+    "ko": "드래곤",
+    "fr": "Dragon",
+    "de": "Drache",
+    "es": "Dragón",
+    "it": "Drago",
+    "en": "Dragon"
+  },
+  "fairy": {
+    "ja": "フェアリー",
+    "ko": "페어리",
+    "fr": "Fée",
+    "de": "Fee",
+    "es": "Hada",
+    "it": "Folletto",
+    "en": "Fairy"
+  }
+}
